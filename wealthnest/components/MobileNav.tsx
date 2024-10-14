@@ -58,7 +58,7 @@ function MobileNav({ user }: MobileNavProps) {
                         href={link.route}
                         key={link.label}
                         className={cn('mobilenav-sheet_close w-full', {
-                          'bg-bankGradient': isActive,
+                          'bg-bank-gradient': isActive,
                         })}
                       >
                         <Image

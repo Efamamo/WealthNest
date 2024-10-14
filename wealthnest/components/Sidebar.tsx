@@ -31,7 +31,7 @@ function Sidebar({ user }: SiderbarProps) {
               href={link.route}
               key={link.label}
               className={cn('sidebar-link', {
-                'bg-bankGradient': isActive,
+                'bg-bank-gradient': isActive,
               })}
             >
               <div className="relative size-6">
