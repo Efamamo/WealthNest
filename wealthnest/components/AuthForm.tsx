@@ -11,9 +11,8 @@ import { Form } from '@/components/ui/form';
 import CustomForm from './CustomForm';
 import { authFormSchema } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
-import SignUp from '@/app/(auth)/sign-up/page';
 import { useRouter } from 'next/navigation';
-import { signIn, signUp } from '@/lib/actions/user.actions';
+import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions';
 
 function AuthForm({ type }: { type: string }) {
   const [user, setUser] = useState(null);
@@ -44,6 +43,7 @@ function AuthForm({ type }: { type: string }) {
           email: data.email,
           password: data.password,
         });
+        setUser(response);
         if (response) {
           router.push('/');
         }
