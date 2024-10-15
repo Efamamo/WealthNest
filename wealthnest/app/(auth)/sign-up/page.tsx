@@ -1,9 +1,9 @@
 import AuthForm from '@/components/AuthForm';
 import React from 'react';
 
-function SignUp() {
+async function SignUp() {
   return (
-    <section className="flex-center seiz-full max-sm:px-6">
+    <section className="flex-center size-full max-sm:px-6">
       <AuthForm type="sign-up" />
     </section>
   );
